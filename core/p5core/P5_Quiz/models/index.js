@@ -1,11 +1,12 @@
 
 const Sequelize = require('sequelize');
+
 const sequelize = new Sequelize("sqlite:quizzes.sqlite", {logging: false});
 
 sequelize.define('quiz', {
     question: {
         type: Sequelize.STRING,
-        unique: {nsg: "Ya no existe esta pregunta"},
+        unique: {nsg: "Ya existe esta pregunta"},
         validate: {notEmpty: {nsg: "La respuesta no puede estar vacía"}}
     },
     answer: {

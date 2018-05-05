@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1> Todos los quizzes </h1>
+    <ul>
+        <% for (let i in quizzes){ %>
+        <% const quiz = quizzes[i]; %>
+        <li>
+            <%= quiz.question %> : <%= quiz.answer%>
+        </li>
+        <% } %>
+    </ul>
+    <a href = "/" > Volver </a>
+  </body>
+</html>
