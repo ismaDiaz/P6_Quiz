@@ -163,7 +163,7 @@ exports.randomplay = (req, res, next) => {
             if (!count) {
                 const score = req.session.randomPlay.length;
                 req.session.randomPlay = [];
-                res.render('quizzes/random_nomore', {score: score});
+                res.render('quizzes/random_none', {score: score});
             };
             return models.quiz.findAll({
                 where: whereOpt,
