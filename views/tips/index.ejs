@@ -11,6 +11,7 @@
 
             <li>
                 <%= tip.text %>
+                (by <%= tip.author ? tip.author.username : "Anonimo" %>)
 
                 <% if (!accepted && (isAdmin || isQuizAuthor)) { %>
 
