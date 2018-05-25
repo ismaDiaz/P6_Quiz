@@ -137,5 +137,15 @@ router.delete('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
     quizController.adminOrAuthorRequired,
     tipController.destroy);
 
+//Nuevas rutas de la práctica 8
+router.get('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)/edit',
+    sessionController.loginRequired,   //Solo se puede editar si se ha hecho Login
+    tipController.adminOrAuthorRequired,   //Nuevos MW para la práctica 8
+    tipController.edit);                   //Solo puede editar el admin o el autor
+
+router.put('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
+    sessionController.loginRequired,
+    tipController.adminOrAuthorRequired,   //Nuevos MW para la práctica 8
+    tipController.update);
 
 module.exports = router;
