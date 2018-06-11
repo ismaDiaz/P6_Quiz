@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-
     "start": "node ./bin/www",
-    "start_old": "supervisor ./bin/www" ,
+    "start_old": "supervisor ./bin/www",
     "super": "heroku local:start",
     "migrate_local": "sequelize db:migrate --url sqlite://$(pwd)/quiz.sqlite",
     "seed_local": "sequelize db:seed:all --url sqlite://$(pwd)/quiz.sqlite",
@@ -15,7 +14,6 @@
     "reset_heroku": "heroku pg:reset DATABASE",
     "mon_heroku": "heroku maintenance:on",
     "moff_heroku": "heroku maintenance:off"
-
   },
   "engines": {
     "node": "8.9.1",
